@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>
+            q24
+        </title>
+        <script>
+            class Vehicle 
+            {
+                run() 
+                {
+                    return ("\n You chose a vehicle.\n");
+                }
+            }
+            class car extends Vehicle
+            {
+                run()
+                {
+                    return super.run()+"\n It's a car.\n";
+                }
+            }
+            class truck extends Vehicle
+            {
+                run()
+                {
+                    return super.run()+"\n It's a truck.\n";
+                }
+            }
+
+            function processData(form)
+            {
+                let x = document.querySelector('input[name="Vehicle"]:checked').value;
+                let obj;
+                if(x == "1")
+                {
+                    obj = new car();
+                }
+                else 
+                {
+                    obj = new truck();
+                }
+                document.getElementById("result").innerHTML = obj.run();
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="results">
+                <form>
+                    <h2>Vehicle type</h2>
+                    <input type="radio" name="Vehicle" value="1">
+                    Car
+                    <input type="radio" name="Vehicle" value="2">
+                    Truck <br><br>
+                    <input type="submit" onclick="processData(this.form); return false;" value="submit">               
+                </form>
+            </div>
+            <div class="resultText" style="display: block;">
+                <p id="result"></p>
+
+            </div>
+        </div>
+    </body>
+</html>

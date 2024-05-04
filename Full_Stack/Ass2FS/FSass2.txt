@@ -1,0 +1,120 @@
+1 evaluate expression ${add(2,3)} using function call in template literal use two arguments.
+
+
+2 passing a function inside template literals using arrow function print a variable is greater than or less than and print true or false.
+3 Write a JavaScript program to mutate the original array to filter out the values specified, based on a given iterator function.
+
+    Check if the last argument provided is a function.
+    Use Array.prototype.map() to apply the iterator function fn to all array elements.
+    Use Array.prototype.filter() and Array.prototype.includes() to pull out the values that are not needed.
+    Set Array.prototype.length to mutate the passed in an array by resetting its length to 0.
+    Use Array.prototype.push() to re-populate it with only the pulled values.
+	
+4 Write a JavaScript program to perform left-to-right function composition for asynchronous functions.
+
+    Use Array.prototype.reduce() and the spread operator (...) to perform function composition using Promise.prototype.then().
+    The functions can return a combination of normal values, Promises or be async, returning through await.
+    All functions must accept a single argument.
+	
+5 Write a JavaScript program to split a multiline string into an array of lines.
+
+    Use String.prototype.split() and a regular expression to match line breaks and create an array.
+	
+6 Write a JavaScript program to iterate over a callback n times.
+
+    Use Function.prototype.call() to call fn n times or until it returns false.
+    Omit the last argument, context, to use an undefined object (or the global object in non-strict mode).
+	
+7 Write a JavaScript program to convert a string to snake case also in KebabCase.
+
+	Note: Break the string into words and combine them adding _ as a separator, using a regexp.
+
+    Use String.prototype.match() to break the string into words using an appropriate regexp.
+    Use Array.prototype.map(), Array.prototype.slice(), Array.prototype.join() and String.prototype.toLowerCase() to combine them, adding _ as a separator.
+	
+8 Write a JavaScript program to build  an array, using an iterator function and an initial seed value.
+
+    Use a while loop and Array.prototype.push() to call the function repeatedly until it returns false.
+    The iterator function accepts one argument (seed) and must always return an array with two elements ([value, nextSeed]) or false to terminate.
+	
+9 Write a JavaScript program to pick  the key-value pairs corresponding to the given keys from an object.
+
+    Use Array.prototype.reduce() to convert the filtered/picked keys back to an object with the corresponding key-value pairs if the key exists in the object.
+	
+10 Write a JavaScript program to map array values to an object using a function. The key-value pairs consist of the original value as the key and the mapped value.
+
+	Note: Use an anonymous inner function scope to declare an undefined memory space, using closures to store a return value. Use a new Array to store the array with a map of the function over its data set and a comma operator to return a second step, without needing to move from one context to another (due to closures and order of operations).
+
+    Use Array.prototype.reduce() to apply fn to each element in arr and combine the results into an object.
+    Use el as the key for each property and the result of fn as the value.
+	
+11 Write a JavaScript program to invert the key-value pairs of an object, without mutating it. The corresponding inverted value of each inverted key is an array of keys responsible for generating the inverted value. If a function is supplied, it is applied to each inverted key.
+
+    Use Object.keys() and Array.prototype.reduce() to invert the key-value pairs of an object and apply the function provided (if any).
+    Omit the second argument, fn, to get the inverted keys without applying a function to them.
+    The corresponding inverted value of each inverted key is an array of keys responsible for generating the inverted value. If a function is supplied, it is applied to each inverted key.
+	
+12 Write a JavaScript program to take any number of iterable objects or objects with a length property and return the longest one.
+
+    Use Array.prototype.reduce(), comparing the length of objects to find the longest one.
+    If multiple objects have the same length, the first one will be returned.
+    Returns undefined if no arguments are provided.
+	
+13 Write a JavaScript program to chain asynchronous functions.
+
+	Note: Loop through an array of functions containing asynchronous events, calling next when each asynchronous event has completed.
+    Loop through an array of functions containing asynchronous events, calling next when each asynchronous event has completed
+	
+14 Write a JavaScript program to curry (curries) a function
+	Note: Use recursion. If the number of provided arguments (args) is sufficient, call the passed function fn. Otherwise, return a curried function fn that expects the rest of the arguments. If you want to curry a function that accepts a variable number of arguments (a variadic function, e.g. Math.min()), you can optionally pass the number of arguments to the second parameter arity.
+
+    Use recursion.
+    If the number of provided arguments (args) is sufficient, call the passed function fn.
+    Otherwise, use Function.prototype.bind() to return a curried function fn that expects the rest of the arguments.
+    If you want to curry a function that accepts a variable number of arguments (a variadic function, e.g. Math.min()), you can optionally pass the number of arguments to the second parameter arity.
+	
+15 Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.
+	Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
+	using ES6:
+	// Define a function named number_order using arrow function syntax with parameters x, y, and z
+	
+16 Write a JavaScript program to convert an asynchronous function to return a promise.
+
+    Use currying to return a function returning a Promise that calls the original function.
+    Use the rest operator (...) to pass in all the parameters.
+    Note: In Node 8+, you can use util.promisify.
+	
+17 Write a JavaScript program to check whether the given argument is a symbol.
+
+    Use typeof to check if a value is classified as a symbol primitive.
+	
+18 Write a JavaScript program to determine if the current runtime environment is a browser. This is so that front-end modules can run on the server (Node) without errors.
+
+    Use Array.prototype.includes() on the typeof values of both window and document (globals usually only available in a browser environment unless they were explicitly defined), which will return true if one of them is undefined.
+    typeof allows globals to be checked for existence without throwing a ReferenceError.
+    If both of them are not undefined, then the current environment is assumed to be a browser.
+	
+19 Write a JavaScript function that accepts an argument and returns the type.
+
+	Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
+
+20 Write a JavaScript program that implements a function that performs a series of asynchronous operations in sequence using Promises and 'async/await'.
+
+21 Write a JavaScript program that creates a class called "BankAccount" with properties for account number and balance. Include methods to deposit and withdraw money from the account. Create some instances of the "BankAccount" class, deposit some money, and withdraw a portion of it.
+
+22 Create a module with the name main.js and create/define a three functions getPower(), capitalize(), roundToDecimalPlace()
+and export two function {capitalize,roundToDecimalPlace} and import it from main.js in displayTotal.js and here create
+displayTotal() function and export it in displayTotal.js file
+
+23 //Generators as Iterables
+Instead of manually enumerating all 52 card values, you can create a generator 
+function that computes all permutations of the different suits and numbers, 
+yielding each one by one. Also show all 52 cards? ♠
+
+24 create a web page using html and css which have div class="results"
+with two vehical type in form which have radio button for car and truck
+also create button using onclick="processData(this.form)", create another div
+whose class="resultText" and p tag whose id="result" using this id print a text when click on submit
+In script tag we have three class vehical whose child class are car and truck 
+this three have run() methos and also have function processData(form).
+
