@@ -1,0 +1,6 @@
+npm install -g lodash
+mkdir npm-demo
+cd npm-demo
+npm init -y
+npm install express --save
+npm list
